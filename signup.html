@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apply to Vertex Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="site-nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="16,2 30,24 16,17" fill="#16213e"/>
+        <polygon points="16,2 2,24 16,17" fill="#ffb454"/>
+        <polygon points="2,24 30,24 16,30" fill="#0d1526"/>
+      </svg>
+      Vertex Club
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="signup.html" class="active">Recruitment</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="signup.html" class="nav-cta">Join Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== RECRUITMENT HEADER ===== -->
+<header class="signup-hero">
+  <div class="container">
+    <p class="hero-eyebrow">Vertex Club Recruitment</p>
+    <h1>Discover. Create. Lead.</h1>
+    <p>
+      We're looking for students who'd rather build something than just talk
+      about it. Fill in your details below to start your application —
+      it takes less than two minutes.
+    </p>
+  </div>
+</header>
+
+<!-- ===== SIGNUP FORM (main focus of this page) ===== -->
+<section class="signup-wrap">
+  <div class="container">
+    <div class="signup-card">
+
+      <div class="success-message" id="successMessage">
+        You're in! Your application has been saved. The recruitment team
+        will review it and reach out soon.
+      </div>
+
+      <form id="signupForm" novalidate>
+
+        <div class="form-group">
+          <label for="username">Username / Full Name</label>
+          <input type="text" id="username" name="username" placeholder="e.g. Aditi Sharma" autocomplete="name" />
+          <p class="error-message" id="usernameError"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+          <p class="error-message" id="emailError"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password" />
+          <p class="password-hint">At least 8 characters, with an uppercase letter, a lowercase letter, and a number.</p>
+          <p class="error-message" id="passwordError"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Vertex Club. Built by students, for students.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

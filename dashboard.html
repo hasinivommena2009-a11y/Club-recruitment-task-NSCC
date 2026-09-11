@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Applicant Dashboard — Vertex Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="site-nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="16,2 30,24 16,17" fill="#16213e"/>
+        <polygon points="16,2 2,24 16,17" fill="#ffb454"/>
+        <polygon points="2,24 30,24 16,30" fill="#0d1526"/>
+      </svg>
+      Vertex Club
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="signup.html">Recruitment</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="signup.html" class="nav-cta">Join Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== DASHBOARD HEADER ===== -->
+<header class="dashboard-hero">
+  <div class="container">
+    <h1>Applicant Dashboard</h1>
+    <p>For the Vertex Club recruitment team — review and manage this semester's applications.</p>
+  </div>
+</header>
+
+<!-- ===== APPLICANTS TABLE ===== -->
+<section class="dashboard-wrap">
+  <div class="container">
+
+    <span class="applicant-count" id="applicantCount">0 applicants registered</span>
+
+    <div class="table-card" id="tableCard">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <!-- Rows are generated automatically by script.js from localStorage -->
+        <tbody id="applicantsTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <div class="emoji">📭</div>
+      <h3>No applicants registered yet</h3>
+      <p>Once students apply through the recruitment form, they'll show up here.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Vertex Club. Built by students, for students.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
